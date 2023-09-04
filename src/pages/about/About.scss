@@ -1,0 +1,21 @@
+.About_Section {
+  padding-inline: 5rem;
+  color: #ff6060;
+  font-weight: 500;
+
+  @media screen and (max-width: 768px) {
+    padding-inline: 0;
+  }
+}
+
+.About_image {
+  img {
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    height: 223px;
+    margin-bottom: 1rem;
+    width: 100%;
+    object-fit: cover;
+  }
+}

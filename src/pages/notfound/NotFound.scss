@@ -1,0 +1,33 @@
+.error {
+  color: #ff6060;
+  text-align: center;
+
+  h1 {
+    font-size: 250px;
+    margin-bottom: auto;
+    margin-top: 50px;
+    @media screen and (max-width: 768px) {
+     font-size: 32.5vw;
+    
+    }
+  }
+
+  h2 {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 51.34px;
+    margin: auto auto 150px;
+    @media screen and (max-width: 768px) {
+      font-size: 4.7vw;
+     
+     }
+  }
+
+  a {
+    color: #ff6060;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

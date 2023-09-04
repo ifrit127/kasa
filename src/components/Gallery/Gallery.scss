@@ -1,0 +1,26 @@
+.gray {
+  background: #f7f7f7;
+  border-radius: 1.5625rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  padding-bottom: 1.7rem;
+  padding-top: 1.7rem;
+  row-gap: 1.7rem;
+
+  & > * {
+    width: 100%;
+    max-width: 20rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gray {
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    padding-top: 0;
+   
+  }
+}

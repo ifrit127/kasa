@@ -1,0 +1,70 @@
+.logements_descriptions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 20px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 2.6vw;
+  }
+
+  .logement_description_title_wrapper {
+    .logement_description_title {
+      background-color: #ff6060;
+      border-radius: 1rem;
+      color: white;
+      margin-top: 1.5rem;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+
+      & .arrow {
+        margin-left: auto;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+
+        &.active {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+
+  .logement_description_content {
+    background-color: #f6f6f6;
+    border-radius: 1rem;
+    padding: 2rem 1rem;
+    position: relative;
+    top: -0.3rem;
+    z-index: -1;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    animation: slide-in 0.5s ease-in-out;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    line-height: 25px;
+
+
+    &.visible {
+      opacity: 1;
+      max-height: 1000px;
+    }
+
+    & p {
+      margin-block: 0;
+    }
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-50%);
+
+  }
+
+  100% {
+    transform: translateY(0%);
+
+  }
+}
