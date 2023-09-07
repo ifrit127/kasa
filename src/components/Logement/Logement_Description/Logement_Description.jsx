@@ -1,13 +1,58 @@
-import React, { useState } from 'react'; // Importe la bibliothèque React.
+import React, {useEffect, useState} from 'react'; // Importe la bibliothèque React.
 import arrow from '../../../assets/arrow_back.png'; // Importe l'image de flèche.
 import './Logement_Description.scss'; // Importe le fichier de style SCSS.
 
 function Logement_Description({ DescriptionTitle, Content }) {
     const [isContentVisible, setIsContentVisible] = useState(false); // Utilise le hook d'état pour gérer la visibilité du contenu.
 
-    const toggleContentVisibility = () => {
-        setIsContentVisible(!isContentVisible); // Inverse la visibilité du contenu lorsqu'on clique sur la flèche.
+    const toggleContentVisibility = async () => {
+        await setIsContentVisible(!isContentVisible); // Inverse la visibilité du contenu lorsqu'on clique sur la flèche.
+        ajusterHauteurDivs();
     };
+
+    useEffect(() => {
+        
+        window.addEventListener("resize", () => {
+            ajusterHauteurDivs();
+        });
+    }, []);
+
+    function ajusterHauteurDivs() {
+       
+        if (window.innerWidth > 768) { 
+            let elementsToMatchHeight = document.querySelectorAll(".logement_description_content.visible");
+            let maxHeight = 0;
+
+            if (elementsToMatchHeight.length === 1) {
+                
+                elementsToMatchHeight[0].style.height = "auto";
+            } else {
+                
+                elementsToMatchHeight.forEach(function(element) {
+                    
+                    let contenu = element.querySelector("p");
+                    if (contenu) {
+                        
+                        if (contenu.clientHeight > element.clientHeight) {
+                            
+                            element.style.height = "auto";
+                        }
+                    }
+                });
+                elementsToMatchHeight.forEach(function(element) {
+                    let originalHeight = element.clientHeight;
+                    if (originalHeight > maxHeight) {
+                        maxHeight = originalHeight;
+                    }
+                });
+
+                elementsToMatchHeight.forEach(function(element, index) {
+                    element.style.height = maxHeight + "px";
+                });
+            }
+        }
+    }
+
 
     return (
         <div className='logements_descriptions'> {/* Conteneur global des descriptions. */}
