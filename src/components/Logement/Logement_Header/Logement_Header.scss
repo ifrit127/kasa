@@ -1,16 +1,21 @@
 .logement_header {
   display: flex;
   justify-content: space-between;
-  margin-top: 1rem;
+  margin-top: 2rem;
+
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    margin-top: 0;
   }
 }
 
 .logement_title {
   flex-grow: 1;
 
+
   h1 {
+
+
     font-size: 36px;
     line-height: 51px;
     font-weight: 500;
@@ -21,16 +26,21 @@
     font-size: 18px;
     font-weight: 500;
 
-}
-@media screen and (max-width: 768px) {
-  h1 {
-    font-size: 4.7vw;
   }
 
-  h2 {
-    font-size: 2.35vw; 
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 20px;
+      line-height: 30px;
+      margin-top: 5px;
+    }
+
+    h2 {
+      font-size: 15px;
+      margin-top: 10px;
+
+    }
   }
-}
 }
 
 .logement_details {
@@ -42,6 +52,12 @@
 .logement_owner {
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+
+  }
+
 }
 
 .logement_owner span {
@@ -59,6 +75,7 @@
     height: 64px;
     width: 64px;
     border-radius: 50%;
+
     @media screen and (max-width: 768px) {
       height: 100%;
       width: 50px;
@@ -90,8 +107,9 @@
   font-size: 14px;
   margin-right: 10px;
   padding: 5px 15px;
+
   @media screen and (max-width: 768px) {
-    font-size: 1.9vw;
+    font-size: 11px;
   }
 }
 
@@ -104,22 +122,28 @@
   align-items: center;
   color: #E3E3E3;
 
+  @media screen and (max-width: 768px) {
+    margin-top: 0;
+  }
+
   .full {
     color: #ff6060;
-   
+
   }
 
   @media screen and (max-width: 768px) {
     margin-right: auto;
     margin-left: 0;
-    
+
   }
 
   & span {
-    margin: 0 3px;
+    margin-right: 3px;
     font-size: 36px;
+
     @media screen and (max-width: 768px) {
-      font-size: 4.7vw;
+      font-size: 22px;
+
     }
   }
 
@@ -129,7 +153,9 @@
 .logement_all_details {
   display: flex;
   flex-direction: column;
+
   @media screen and (max-width: 768px) {
     flex-direction: row-reverse;
+    margin-top: 10px;
   }
 }

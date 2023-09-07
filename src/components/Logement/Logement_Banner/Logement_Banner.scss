@@ -8,5 +8,11 @@
     height: 415px;
     position: relative;
     object-fit: cover;
+
+    @media screen and (max-width: 768px) {
+      min-width: 335px;
+      min-height: 255px;
+      height: auto;
+    }
   }
 }

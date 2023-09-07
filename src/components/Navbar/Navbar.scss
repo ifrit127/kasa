@@ -4,16 +4,32 @@
   color: #ff6060;
   font-size: 24px;
   font-weight: 500;
-  gap: 2rem;
-  padding: 2.5rem 0;
+
+  padding: 1rem 0;
+
+  .navigation {
+    width: auto;
+    display: flex;
+    margin-left: auto;
+    gap: 3rem;
+
+    @media screen and (max-width: 768px) {
+      height: 17px;
+      gap: 1rem;
+
+      font-size: 14px;
+      letter-spacing: 0em;
+
+
+    }
+  }
 
   @media screen and (max-width: 768px) {
     text-transform: uppercase;
-    font-size: 2.7vw;
 
     .logo {
-      width: 29%;
-      height: auto;
+      width: 145px;
+      min-height: 47px;
     }
   }
 

@@ -2,6 +2,7 @@ import React from 'react'; // Importe la bibliothèque React.
 import logo from '../../assets/BLACK_LOGO.png'; // Importe le logo depuis le chemin spécifié.
 import "./Footer.scss"; // Importe les styles CSS du composant Footer.
 
+
 function Footer() {
     return (
         <div className="footer">

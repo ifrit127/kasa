@@ -10,8 +10,10 @@ function About() {
             </div>
 
             <div className='About_Section'>
+            
                 <LogementDescription
                     DescriptionTitle="Fiabilité"
+                    
                     Content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes."
                 />
                 <LogementDescription

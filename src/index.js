@@ -9,6 +9,7 @@ import Logement from './pages/logement/Logement.jsx';
 import About from './pages/about/About.jsx'; 
 import NotFound from './pages/notfound/NotFound.jsx'; 
 
+
 // Crée une instance de createBrowserRouter avec des routes et des éléments associés.
 const router = createBrowserRouter([
     {

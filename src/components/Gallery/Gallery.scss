@@ -9,7 +9,7 @@
   padding-top: 1.7rem;
   row-gap: 1.7rem;
 
-  & > * {
+  &>* {
     width: 100%;
     max-width: 20rem;
   }
@@ -21,6 +21,7 @@
     flex-direction: column;
     background-color: white;
     padding-top: 0;
-   
+    row-gap: 1rem;
+
   }
 }

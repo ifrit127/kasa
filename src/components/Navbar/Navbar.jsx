@@ -6,8 +6,12 @@ import { NavLink } from 'react-router-dom'; // Importe le composant NavLink de R
 function Navbar() {
     return (
         <nav className='navbar'>
-            <img src={logo} alt='Kasa' className='logo' /> {/* Affiche le logo Kasa. */}
 
+            <NavLink to="/">
+            <img src={logo} alt='Kasa' className='logo' /> {/* Affiche le logo Kasa. */}
+            </NavLink>
+
+            <div className='navigation'>
             <NavLink to="/">
                 <div>Accueil</div> {/* Crée un lien de navigation vers la page d'accueil. */}
             </NavLink>
@@ -15,8 +19,9 @@ function Navbar() {
             <NavLink to="/about">
                 <div>A Propos</div> {/* Crée un lien de navigation vers la page "A Propos". */}
             </NavLink>
+            </div>
         </nav>
     );
 }
 
-export default Navbar; // Exporte le composant Navigation pour une utilisation ailleurs.
+export default Navbar; // Exporte le composant Navbar pour une utilisation ailleurs.

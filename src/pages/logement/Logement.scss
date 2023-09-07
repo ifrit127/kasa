@@ -2,16 +2,13 @@
   color: #ff6060;
   font-weight: 500;
 
-  @media screen and (max-width: 768px) {
-    font-size: 2.1vw;
-  }
-
   .logement_description {
     display: flex;
     gap: 2rem;
 
     @media screen and (max-width: 768px) {
       flex-direction: column;
+      gap: 0rem;
 
     }
   }
